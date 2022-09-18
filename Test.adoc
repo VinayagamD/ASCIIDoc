@@ -1,0 +1,240 @@
+= AsciiDoc Demos
+Vinayagam D <vinayagam.d.ganesh@gmail.com>
+v2.3, 2022-09-18
+:doctype: book
+:icons: font
+:source-highlighter:
+:toc:
+
+== Introduction
+AsciiDoc is  _also_ plain test! IT's as readable as Markdown, but has more features.
+
+== Advantages
+* #Single specification#
+* Designed to be converted to multiple formats
+** HTML
+** ((PDF))
+** ((DocBook))
+** man page
+** ((EPUB))
+** more...
+* *Many* more (optional) features than Markdown.
+* Can be used to write books (Supported by ((O'Reilly)))
+* Corporate sponsorship by ((Okta))
+
+== Disadvantage
+* Less well-known
+
+== Text Formatting
+Of course, ((italics)) and ((bold)) are supported. However, AsciiDoc also include des ((underlining)), ((strikethrough)) and ((highlighting)).
+
+* _italics_
+* *bold*
+* #highlighting#
+* [.underline]#underline#
+* [.line-through]#strikethrough#
+
+=== More Visual Formatting
+Check out this ((note))!
+
+NOTE: You can even high##light## or italicize _parts_ of words!
+
+In addition to `NOTE`, there are other options:
+
+TIP: Look both the ways before crossing the streets.
+
+WARNING: Don't answer the phone if you don't recognize the number
+
+CAUTION: Wet floor.
+
+IMPORTANT: Wash your hands!
+
+=== Superscript/Subscript
+Creating a ((superscript)) or ((subscript)) is as easy as bold or italics.
+
+* e = mc^2^
+* Drink lots of H~2~O
+* 2^8^ = 256
+
+== Including Files
+With AsciiDoc, you can ((include)) external files. This means that you cna re-use files (headers, footers, signatures, disclaimers, etc.), or keep your documentation more organized. For example, have a separate file for every chapter of a book.
+
+include::Including.adoc[]
+
+Now, the text above comes from a separate file.
+
+
+== Including code
+Code files can be included as well -- and so can their output!
+
+This is especially useful for validating that ((code samples)) actually work.
+
+.count.py
+[source,py]
+----
+include::count.py[]
+----
+
+*Output*
+
+----
+include::out.txt[]
+----
+
+
+== Tables
+Tables are similar to Markdown
+
+.Character Ages
+|===
+| Name | Age | Hobbies
+
+| Fred
+| 33
+| Bird Watching
+
+| Barney
+| 31
+| Bowling
+
+|===
+
+*But wait -- there's more!*
+
+You can create tables out of _CSV files_!
+[%header, format=csv]
+|===
+include::data.csv[]
+|===
+
+This means that each time a document is generated, it can have _fresh_ data.
+
+== Sidebars
+sidebar:
+
+[sidebar]
+****
+Use sidebars to visually complementary information from the main text
+****
+
+.Another Sidebar
+****
+This demonstrates some additional functionality of the sidebar.
+
+TIP: Sidebars can contain any type of content.
+
+
+.Source Code or structured data:
+[source,json]
+----
+[
+    {
+        "event_name": "Seller Account Create",
+        "timestamp": "2020-06-23T17:36:08+00:00",
+        "statistic_id": "WvN6Sp",
+        "event_protperties" : {
+            "$value": 0,
+            "Account": "True",
+            "$event_id": "Seller Account Created"
+        }
+    },
+    {
+        "event_name": "Subscribed to List",
+        "timestamp": "2020-06-23T17:28:19+00:00",
+        "statistic_id": "UbPfvv",
+        "event_protperties" : {
+            "List": "Seller (Home Page Signup)",
+            "$event_id": "1592933299"
+        }
+    },
+    {
+        "event_name": "Subscribed to List",
+        "timestamp": "2020-06-14T13:52:50+00:00",
+        "statistic_id": "UbPfvv",
+        "event_protperties" : {
+            "List": "Newsletter",
+            "$event_id": "1589464370"
+        }
+    }
+]
+----
+****
+
+== Quotations
+[quote,Bill Murray]
+____
+Every moment  that you share someone else's pain, feel what they feel, makes you more human.
+____
+
+[quote,Michael Feathers, author of http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052[Working Effectively with Legacy Code]]
+____
+Clean code was written by someone who cares.
+____
+
+== Emoji & Font Awesome
+Standard Unicode umoji, such as simleys and thumbs-up, are supported:
+
+* 😎
+* 👍
+
+In addition, icons from the widely-used https://fontawesome.com/[Font Awesome]
+
+* icon:headphones[]
+* icon:signal[]
+* icon:traii-gate[]
+
+Here are some that may be useful for networking professionals:
+
+* icon:wifi[]
+* icon:network-wired[]
+* icon:server[]
+* icon:ethernet[]
+
+== Special Characters
+Some special character replacements happen automatically:
+
+* (C)
+* (R)
+* (TM)
+* ->
+* =>
+* <-
+* <=
+
+== Q&A
+
+When writing documentation or a textbook, you can add a Q&A section:
+
+[quanda]
+What color is the dress?::
+Blue and black.
+
+How should "gif" be pronounced?::
+With a hard *G*.
+
+`vi` or `emacs`?::
+Nope. Not going there.
+
+== Checklists
+
+The syntax is identical to Markup's https://www.markdownguide.org/extended-syntax/[Extended Syntax]:
+
+* [x] Kickoff meeting
+* [x] Research
+* [x] Tech design approval
+* [x] Coding
+* [ ] Testing
+* [ ] QA
+* [ ] Customer demo
+
+== Abbreviations
+Here's one that should be exciting for anyone who has ever done any king of technical writing!
+
+:prod: Big Amazing Software Product
+:co: Fabulous Company Name
+:team: Super-Competent Development Team
+
+Here at {co}, we are extremely excited to announce {prod}. Created by our {team}, {prod} is the best thing to come out of {co} in the past fifty years! We are so excited for you to try out {prod}. {team} has been nominated for an industry award, and everyone here at {co} is rooting for them!
+
+[index]
+== Index

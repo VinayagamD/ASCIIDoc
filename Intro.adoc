@@ -1,0 +1,12 @@
+= Hello Ascii Doctor
+Demonstration of using Ascii Doctor
+
+== Welcome
+
+Welcome to Ascii Doctor Demo
+This is the welcome section
+
+== Done so far
+
+* Ruby installation
+* AsciiDoctor
